@@ -1,0 +1,65 @@
+
+# Compiled Python files
+__pycache__/
+*.pyc
+
+# Dataset folder (This is the crucial part for your question)
+# We exclude the large downloaded data from KaggleHub
+# The exact path may vary based on where kagglehub stores it, but often 
+# it's within a user cache directory, or in the current directory if unzipped.
+# We'll include the path to the main dataset folder from the image:
+DBlur/
+CelebA/
+Gopro/
+Helen/
+HIDE/
+RealBlur_J/
+RealBlur_R/
+TextOCR/
+Wider-Face/
+
+# Model Weights and Training Logs
+# We only track the code, not the large binary weights
+model_weights/
+!model_weights/
+model_weights/*
+!model_weights/README.md 
+
+# Training and evaluation outputs
+*.log
+*.txt
+training_loss.png
+evaluation_metrics.csv
+results/
+
+# 2. Operating System/IDE Artifacts
+.DS_Store
+.vscode/
+
+# 3. Python/Virtual Environment
+# Virtual environment directories
+venv/
+env/
+.env
+
+# Pip packages
+dist/
+build/
+*.egg-info/
+
+# Jupyter/IPython Notebooks artifacts
+.ipynb_checkpoints
+
+# 4. Containerization/Deployment Artifacts
+# Kubernetes secrets (if generated locally, DO NOT commit actual secrets)
+*.kubeconfig
+*.key
+*.pem
+
+# Docker build cache directories
+.dockerignore
+
+# 5. Streamlit Cache
+
+# Local Streamlit assets
+.streamlit/
